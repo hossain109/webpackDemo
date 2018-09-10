@@ -1,0 +1,153 @@
+.dropdown-submenu {
+position: relative;
+}
+.dropdown-submenu a::after {
+transform: rotate(0deg);
+position: absolute;
+right: 6px;
+top: .8em;
+}
+.dropdown-submenu .dropdown-menu {
+top: 0;
+left: 100%;
+margin-left: .1rem;
+margin-right: .1rem;
+}
+.scroll{
+	overflow: scroll;
+	border: 1px solid black;
+	width: 200px;
+	height: 100px;	
+
+}
+#chain_method{
+	position: relative;
+}
+#photo1{
+	position: relative;
+}
+#slide_down, #slide_panel{
+	padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    border: solid 1px #666;
+    border-radius: 3px;
+}
+#slide_panel{
+	padding: 50px;
+	display: none;
+}
+.basic_anim{
+	position: relative;
+
+}
+.flottantGauche{
+	float: left;
+	padding-left: 50px;
+}
+  #img1 {z-index: 1;}
+  #img2 {z-index: 2;}
+  #img3 {z-index: 3;}
+  #img4 {z-index: 4;}
+  #img5 {z-index: 5;}
+
+#message_delay{
+	display: none;
+	background-color: yellow;
+}
+#balle{
+	height: 20px;
+	width: 20px;
+	background-color: red;
+	border: 2px solid black;
+	position: relative;
+	border-radius: 10px;
+}
+#gauche_slelect, #droite_select, #milieu{
+	width: 100px;
+	height: 200px;
+	text-align: center;
+}
+#listesImages ul li{
+	display: inline;
+}
+#transfer1, #transfer2{
+	width: 100px;
+	height: 200px;
+}
+.img_pressing{
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+.nauralpic{
+	padding: 0px;
+}
+#nature1_grand{
+	height: 400px;
+	width: 400px;
+}
+.diaporama{
+	position: absolute;
+	display: none;
+
+}
+#img_full{
+	display: none;
+}
+#panel{
+	display: none;
+}
+#panel,#flip{
+	padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3
+}
+body{
+	background-color: gray;
+}
+.bleu{
+	color:blue;
+	text-decoration: underline;
+}
+.grand{
+	font-weight: 18em;
+	font-style: italic;
+}
+.vert{
+	color: green;
+	text-decoration: none;
+}
+#lumiere {
+    width: 200px;
+    height: 20px; 
+    background-color: white;
+}
+/* jeu voiture */
+#jeu{
+  width: 400px;
+  height: 400px;
+  border: 2px black solid;
+  overflow: hidden;
+  position: relative;
+}
+.fond{
+  margin-bottom:-5px;
+  z-index: 10;
+  position: relative;
+}
+#vj{
+  z-index: 100;
+  position: absolute;
+  top: 10px;
+  left: 48px;
+}
+#vr{
+  z-index: 80;
+  position: absolute;
+  top: -200px;
+  left: 0px;
+}

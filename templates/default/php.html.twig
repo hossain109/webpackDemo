@@ -1,0 +1,183 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}jQuery{% endblock %}
+
+{% block body %}
+<div class="container">
+	<p class="">Practice PHP</p>
+		<div class="nav nav-tabs">
+			<li class="nav-item p-2">
+				  <a class="btn btn-secondary dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> OOP</a>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+					<a class="dropdown-item" href="#object">Object</a>
+					<a class="dropdown-item" href="#classe">Classe</a>
+					<a class="dropdown-item" href="#methods">Setting Methods</a>
+					<a class="dropdown-item" href="#constant">Constant</a>
+					<a class="dropdown-item" href="#constructor">Constructor</a>
+					<a class="dropdown-item" href="http://www.inphp7.com/singleton-design-pattern.php">http://www.inphp7.com/singleton-design-pattern.php</a>
+					<a class="dropdown-item" href="#inheritance">Inheritance</a>
+					<a class="dropdown-item" href="#interface">Interface</a>
+					<a class="dropdown-item" href="#abstract">Abstract</a>
+					<a class="dropdown-item" href="#magiques">Methods Magiques</a>
+				</div>
+			</li>
+		</div>
+		<div class="card mt-2" id="object">
+			<div class="card-body">
+				<div class="card-header">What is Object ?</div>
+				<blockquote class="blockquote ml-5">
+					<p>The fundamental idea behind an object-oriented language is to enclose a bundle of variables and functions into a single unit and keep both variables and functions safe from outside interference and misuse. Such a unit is called object which acts on data.
+					</p>
+				</blockquote>
+			</div>
+			<div class="card-body">
+				<div class="card-header">What is Class ?</div>
+				<blockquote class="blockquote ml-5">
+					<p>In object-oriented programming, a class is a construct or prototype from which objects are created. A class defines constituent members which enable class instances to have state and behavior. Data field members enable a class object to maintain state and methods enable a class object's behavior.
+					</p>
+				</blockquote>
+			</div>
+			<div class="card-body" id="methods">
+				<div class="card-header">Setting Methods</div>
+				<blockquote class="blockquote ml-5">
+					<li>The functions which are declared in a class are called methods.</li>
+					<li>A class method is exactly similar to PHP functions.</li>
+					<li>Declaring a method in a class is an easy task, use one of the keyword public, protected, or private followed by a method name
+						<ul>
+							<li>public : The method can be accessed from outside the class.</li>
+							<li>private : No access is granted from outside the class.</li>
+							<li>protected : No access is granted from outside the class except a class that’s a child of the class with the protected property or method.</li>
+						</ul>
+					</li>
+					<li>A valid method name starts with a letter or underscore, followed by any number of letters, numbers, or underscores.</li>
+					<li>The method body enclosed within a pair of braces which contains codes. The opening curly brace ( { ) indicates the beginning of the method code and the closing curly ( } ) brace indicates the termination of the method.</li>
+					<li>If the method is not defined by public, protected, or private then default is public.</li>
+					<li>Can access properties and methods of the current instance using $this (Format $this->property) for non static property.</li>
+				</blockquote>
+			</div>
+			<div class="card-body" id="constant">
+				<div class="card-header">PHP: Class Constants</div>
+				<blockquote class="blockquote ml-5">
+					<p> Note: PHP: Scope Resolution Operator (::)</p>
+					<h4>PHP: Class Constants</h4>
+					<li>A special entity that remains fixed on an individual class basis.</li>
+					<li>Constant names are not preceded by a dollar sign ($) like a normal variable declaration.</li>
+					<li>Interfaces may also include constants.</li>
+					<li>When calling a class constant using the $classname :: constant syntax, the classname can actually be a variable.</li>
+					<li>As of PHP 5.3, you can access a static class constant using a variable reference (Example: className :: $varConstant).</li>
+				</blockquote>
+			</div>
+			<div class="card-body">	
+				<div class="card-header">Understanding public, private, protected properties</div>
+					<blockquote class="blockquote ml-5">
+					<p>Properties can be public, private or protected. Public means that properties can be accessed everywhere, private means properties can be accessed by the class that defines the member and protected means properties can be accessed only within the class itself and by inherited and parent classes.</p>
+					</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="constructor">
+			<div class="card-body">
+				<div class="card-header">PHP Constructor methods</div>
+				<blockquote class="blockquote ml-5">
+					<li>The constructor is a special built-in method, added with PHP 5, allows developers to declare for classes.</li>
+					<li>Constructors allow to initializing object properties ( i.e. the values of properties) when an object is created.</li>
+					<li>Classes which have a constructor method execute automatically when an object is created.</li>
+					<li>The 'construct' method starts with two underscores (__).</li>
+					<li>The constructor is not required if you don't want to pass any property values or perform any actions when the object is created.
+					</li>
+					<li>PHP only ever calls one constructor.</li>
+				</blockquote>
+			</div>
+			<div class="card-body">
+				<div class="card-header">The Operator -> and ::</div>
+				<blockquote class="blockquote ml-5">
+					<li>L'opérateur « -> » permet d'accéder à un élément de tel objet, tandis que l'opérateur « :: » permet d'accéder à un élément de telle classe.</li>
+					<li>Au sein d'une méthode, on accède à l'objet grâce à la pseudo-variable $this, tandis qu'on accède à la classe grâce au mot-clé self.</li>
+					<li>Les attributs et méthodes statiques ainsi que les constantes de classe sont des éléments propres à la classe, c'est-à-dire qu'il n'est pas utile de créer un objet pour s'en servir.</li>
+					<li>Les constantes de classe sont utiles pour éviter d'avoir un code muet, c'est-à-dire un code qui, sans commentaire, ne nous informe pas vraiment sur son fonctionnement.</li>
+					<li>Les attributs et méthodes statiques sont utiles lorsque l'on ne veut pas avoir besoin d'un objet pour s'en servir.</li>
+				</blockquote>
+			</div>
+			<div class="card-body">
+				<div class="card-header">PHP Destructors methods</div>
+				<blockquote class="blockquote ml-5">
+					<li>The destructor is the counterpart of constructor.</li>
+					<li>A destructor function is called when the object is destroyed</li>
+					<li>A destructor function cleans up any resources allocated to an object after the object is destroyed.
+					</li>
+					<li>A destructor function is commonly called in two ways: When a script ends or manually delete an object with the unset() function</li>
+					<li>The 'destructor' method starts with two underscores (__).</li>
+				</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="inheritance">
+			<div class="card-body">
+				<div class="card-header">PHP: Inheritance</div>
+				<blockquote class="blockquote ml-5">
+					<li>Inheritance is a well-established programming principle.</li>
+					<li>Inheritance enables classes to form a hierarchy like a family tree.</li>
+					<li>Allows subclasses to share the methods and properties (which are public or protected) of its superclass.</li>
+					<li>Superclass is the parent class.</li>
+					<li>A subclass can add properties and methods.</li>
+					<li>Inheritance allows reusing code.</li>
+				</blockquote>
+				<blockquote class="blockquote ml-5">
+					<li>Provides methods to implement.</li>
+					<li>Derived classes may implement more than one interface.</li>
+					<li>Interfaces may inherit from other interfaces using the extends keyword.</li>
+					<li>All methods are assumed to be public in the interface definition can be defined explicitly as public or implicitly.</li>
+					<li>When a class implements multiple interfaces there cannot be any naming collision between methods defined in the different interfaces.</li>
+				</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="interface">
+			<div class="card-body">
+				<div class="card-header">PHP: Interfaces</div>
+				<blockquote class="blockquote ml-5">
+					<li>Provides methods to implement.</li>
+					<li>Derived classes may implement more than one interface.</li>
+					<li>Interfaces may inherit from other interfaces using the extends keyword.</li>
+					<li>All methods are assumed to be public in the interface definition can be defined explicitly as public or implicitly.</li>
+					<li>When a class implements multiple interfaces there cannot be any naming collision between methods defined in the different interfaces.</li>
+					<li>Interfaces, like abstract classes, include abstract methods and constants. However, unlike abstract classes, interfaces can have only public methods, and cannot have variables.</li>
+				</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="abstract">
+			<div class="card-body">
+				<div class="card-header">Abstraction and Finalisation</div>
+				<blockquote class="blockquote ml-5">
+					<p><b>Abstraction:</b> <br>On ne pourra pas se servir directement de la classe. La seule façon d'exploiter ses méthodes est de créer une classe héritant de la classe abstraite.Pour déclarer une classe abstraite, il suffit de faire précéder le mot-clé class du mot-clé abstract.<br>Si vous décidez de rendre une méthode abstraite en plaçant le mot-clé abstract juste avant la visibilité de la méthode, vous forcerez toutes les classes filles à écrire cette méthode. Si tel n'est pas le cas, une erreur fatale sera levée. Puisque l'on force la classe fille à écrire la méthode, on ne doit spécifier aucune instruction dans la méthode, on déclarera juste son prototype (visibilité + function + nomDeLaMethode + parenthèses avec ou sans paramètres + point-virgule).</p>
+					<p><b>Finalisation:</b><br>Le concept des classes et méthodes finales est exactement l'inverse du concept d'abstraction. Si une classe est finale, vous ne pourrez pas créer de classe fille héritant de cette classe.<br>Pour déclarer une classe finale, vous devez placer le mot-clé final juste avant le mot-clé class, comme abstract.<br><br>Si vous déclarez une méthode finale, toute classe fille de la classe comportant cette méthode finale héritera de cette méthode mais ne pourra la redéfinir</p>
+				</blockquote>
+			</div>
+			<div class="card-body">
+				<div class="card-header">Méthodes finales</div>
+				<blockquote class="blockquote ml-5">
+					<p>Si vous déclarez une méthode finale, toute classe fille de la classe comportant cette méthode finale héritera de cette méthode mais ne pourra la redéfinir. Si vous déclarez votre méthode recevoirDegats en tant que méthode finale, vous ne pourrez la redéfinir.</p>
+				</blockquote>
+			</div>
+			<div class="card-body">
+				<div class="card-header">Résolution statique à la volée</div>
+				<blockquote class="blockquote ml-5">
+				<p>Effectuons d'abord un petit flash-back sur self :: . Vous vous souvenez à quoi il sert ? À appeler un attribut, une méthode statique ou une constante de la classe dans laquelle est contenu self ::</p>
+				</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="magiques">
+			<div class="card-body">
+				<div class="card-header">Les maguques methods</div>
+				<blockquote class="blockquote ml-5">
+					<p>Une méthode magique est une méthode qui, si elle est présente dans votre classe, sera appelée lors de tel ou tel évènement. Si la méthode n'existe pas et que l’évènement est exécuté, aucun effet « spécial » ne sera ajouté, l’évènement s'exécutera normalement.<br><strong> Le but des méthodes magiques est d'intercepter un évènement, dire de faire ceci ou cela et retourner une valeur utile pour l’évènement si besoin il y a.</strong></p>
+					<p>Quels que mehtods:</p>
+					<li>__construct ,__destruct</li>
+					<li>« __set » et « __get »</li>
+					<p> __set: Cette méthode est appelée lorsque l'on essaye d'assigner une valeur à un attribut auquel on n'a pas accès ou qui n'existe pas. Cette méthode prend deux paramètres : le premier est le nom de l'attribut auquel on a tenté d'assigner une valeur, le second paramètre est la valeur que l'on a tenté d'assigner à l'attribut. Cette méthode ne retourne rien. </p>
+					<p> __get: Cette méthode est appelée lorsque l'on essaye d'accéder à un attribut qui n'existe pas ou auquel on n'a pas accès. Elle prend un paramètre : le nom de l'attribut auquel on a essayé d'accéder. Cette méthode peut retourner ce qu'elle veut.</p>
+					<li>« __isset » et « __unset »</li>
+					<p> __isset: __issetest appelée lorsque l'on appelle la fonctionissetsur un attribut qui n'existe pas ou auquel on n'a pas accès. Étant donné que la fonction initialeissetrenvoietrueoufalse, la méthode magique __isset doit renvoyer un booléen.</p>
+					<p> __unset: Cette méthode est appelée lorsque l'on tente d'appeler la fonctionunsetsur un attribut inexistant ou auquel on n'a pas accès. On peut facilement implémenter __unsetà la classe précédente de manière à supprimer l'entrée correspondante dans notre tableau $attributs. Cette méthode ne doit rien retourner</p>
+				</blockquote>
+			</div>
+		</div>
+</div>
+{% endblock %}

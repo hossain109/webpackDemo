@@ -1,0 +1,1088 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}jQuery{% endblock %}
+
+{% block body %}
+<div class="container">
+	<p class="">Jqury with webpack</p>
+		<div class="nav nav-tabs">
+			<li class="nav-item p-2">
+				  <a class="btn btn-secondary dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Selectors</a>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+					<a class="dropdown-item" href="#all_elements">Selects all elements</a>
+					<a class="dropdown-item" href="#current_elements">Select current element</a>
+					<a class="dropdown-item" href="#class_element">Select a class</a>
+					<a class="dropdown-item" href="#first_select_element">Select first element</a>
+					<a class="dropdown-item" href="#first_ul_element">select ul li frist element</a>
+					<a class="dropdown-item" href="#first_ul_element">Select all first li of ul</a>
+					<a class="dropdown-item" href="#select_href">Select href</a>
+					<a class="dropdown-item" href="#target_blank">Select target _blank</a>
+					<a class="dropdown-item" href="#active_click">Active Click</a>
+				</div>
+			</li>
+			<li class="nav-item p-2">
+				<a class="btn btn-secondary dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" > Base jQuery</a>
+				<div class="dropdown-menu" aria-labeledby="dropdownMenuButton">
+
+					<a class="dropdown-item" href="#modification">Modification elements of DOM</a>
+					<a class="dropdown-item" href="#insert_test">Insert & Replace elements into DOM</a>
+					<a class="dropdown-item" href="#some_methods">Some Methods</a>
+					<a class="dropdown-item" href="#formulaire">jQuery avec Formulaire</a>
+				</div>
+			</li>
+		 	<li class="nav-item dropdown p-2">
+		 		<a class="nav-link btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Effects</a>
+		 		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		 			<a class="dropdown-item" href="#fadeTest">Fade</a>
+		 			<a class="dropdown-item" href="#jquery_effects">Slide</a>
+		 			<a class="dropdown-item" href="#animation">Animate</a>
+		 			<a class="dropdown-item" href="#text">Text</a>
+		 			<a class="dropdown-item" href="#text_image">Text Image</a>
+		 			<a class="dropdown-item" href="#change">Change</a>
+		 			<a class="dropdown-item" href="#stop">Stop</a>
+		 			<a class="dropdown-item" href="#callback">Callback</a>
+		 			<a class="dropdown-item" href="#chaining">Chaining</a>
+		 			<a class="dropdown-item" href="#class_test">Class</a>
+		 		</div>
+		 	</li>
+		 	<li class="nav-item dropdown p-2">
+		 		<a class="nav-link btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >jQuery UI</a>
+		 		<ul class="dropdown-menu">
+		 			<li class="dropdown-submenu">
+		 				<a href="" class="dropdown-item dropdown-toggle">Effects</a>
+		 				<ul class="dropdown-menu">
+		 					<li><a class="dropdown-item" href="">Add Class</a></li>
+		 					<li><a class="dropdown-item" href="">Color Animation</a></li>
+		 					<li><a class="dropdown-item" href="">Easing</a></li>
+		 					<li><a class="dropdown-item" href="">Effect</a></li>
+		 					<li><a class="dropdown-item" href="">Hide</a></li>
+		 					<li><a class="dropdown-item" href="">Remove Class</a></li>
+		 					<li><a class="dropdown-item" href="">Show</a></li>
+		 					<li><a class="dropdown-item" href="">Switch Class</a></li>
+		 					<li><a class="dropdown-item" href="">Toggle</a></li>
+		 					<li><a class="dropdown-item" href="">Toggle Class</a></li>
+		 				</ul>
+		 			</li>
+		 			<li class="dropdown-submenu">
+		 				<a href="" class="dropdown-item dropdown-toggle">Widgets</a>
+		 				<ul class="dropdown-menu">
+		 					<li><a class="dropdown-item" href="">Accordion</a></li>
+		 					<li><a class="dropdown-item" href="">Autocomplete</a></li>
+		 					<li><a class="dropdown-item" href="">Button</a></li>
+		 					<li><a class="dropdown-item" href="">Tabs</a></li>
+		 					<li><a class="dropdown-item" href="">Datepicker</a></li>
+		 					<li><a class="dropdown-item" href="">Slider</a></li>
+		 					<li><a class="dropdown-item" href="">Progressbar</a></li>
+		 					<li><a class="dropdown-item" href="">Dialog</a></li>
+		 					<li><a class="dropdown-item" href="">Spinner</a></li>
+		 					<li><a class="dropdown-item" href="">Tooltip</a></li>
+		 					<li><a class="dropdown-item" href="">Menu</a></li>
+		 					<li><a class="dropdown-item" href="">Selectmenu</a></li>
+		 				</ul>
+		 			</li>
+		 			<li class="dropdown-submenu">
+		 				<a href="" class="dropdown-item dropdown-toggle">Interactions</a>
+		 				<ul class="dropdown-menu">
+		 					<li><a class="dropdown-item" href="">Draggable</a></li>
+		 					<li><a class="dropdown-item" href="">Droppable</a></li>
+		 					<li><a class="dropdown-item" href="">Resizable</a></li>
+		 					<li><a class="dropdown-item" href="">Selectable</a></li>
+		 					<li><a class="dropdown-item" href="">Sortable</a></li>
+		 				</ul>
+		 			</li>
+		 			<li class="dropdown-submenu">
+		 				<a href="" class="dropdown-item dropdown-toggle">Utilities</a>
+		 				<ul class="dropdown-menu">
+		 					<li><a class="dropdown-item" href="">Position</a></li>
+		 					<li><a class="dropdown-item" href="">Widget Factory</a></li>
+		 				</ul>
+		 			</li>
+		 			<li class="dropdown"><a class="dropdown-item" href="http://jqueryui.com/">http://jqueryui.com/</a>
+						
+					</li>
+
+		 		</ul>
+		 	</li>
+		 	<li class="nav-item dropdown p-2">
+		 		<a class="btn btn-secondary nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+
+				<ul class="dropdown-menu">
+					<li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Mouse Events</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#mouse_event">click</a></li>
+						<li><a class="dropdown-item" href="#mouse_event">dblclick</a></li>
+						<li><a class="dropdown-item" href="#mouse_event">mouseenter</a></li>
+						<li><a class="dropdown-item" href="#mouse_event">mouseleave</a></li>
+					</ul>
+					</li>
+					<li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Keyboard Events</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#key_effect">keypress</a></li>
+							<li><a class="dropdown-item" href="#key_effect">keydown</a></li>
+							<li><a class="dropdown-item" href="#key_effect">keyup</a></li>
+						</ul>
+					</li>
+					<li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">	Form Events</a>
+						<ul class="dropdown-menu">
+							<li><a href="#form_events" class="dropdown-item">submit</a></li>
+							<li><a href="#form_events" class="dropdown-item">change</a></li>
+							<li><a href="#form_events" class="dropdown-item">focus</a></li>
+							<li><a href="#form_events" class="dropdown-item">blur</a></li>
+						</ul>
+					</li>
+					<li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Document/Window Events</a>
+						<ul class="dropdown-menu">
+							<li><a href="#documents_events" class="dropdown-item">load</a></li>
+							<li><a href="#documents_events" class="dropdown-item">resize</a></li>
+							<li><a href="#documents_events" class="dropdown-item">scroll</a></li>
+							<li><a href="#documents_events" class="dropdown-item">unload</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a class="dropdown-item" href="#on"> on</a>
+
+					</li>
+
+				</ul>
+		 	</li>
+		 	<li class="nav-item dropdown p-2">
+		 		<a class="nav-link btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Dom CRUD</a>
+		 		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		 			<a class="dropdown-item" href="#dombase">Dom Base</a>
+		 		</div>
+		 	</li>
+		 	<li class="nav-item dropdown p-2">
+		 		<a class="nav-link btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >jQuery PI</a>
+		 		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		 			<a class="dropdown-item" href="#exemple_plugin">Exemple Plugin</a>
+		 		</div>
+		 	</li>
+		 	<li class="nav-item dropdown p-2">
+		 		<a class="nav-link btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >HTML5</a>
+		 		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		 			<a class="dropdown-item" href="#exemple_html5">HTML5 Sommaire</a>
+		 		</div>
+		 	</li>
+		</div>
+		<div class="card mt-2" id="eexemple_plugin">
+			<div class="card-body">
+				<div class="card-header">Some exemples of functionalities and plugin ..</div>
+				<blockquote class="blockquote ml-5">
+					<div class="row">
+						<div class="col-md-6">
+							<p>Tri de table</p>
+							<p>Validation de formulaire</p>
+							<p>Création de menus (contextuel, radial, ...)</p>
+							<p>Gestion d'animations (Carrousel, Zoom, …)</p>
+						</div>
+						<div class="col-md-6">
+							<p>Tablesorter, DataTables, </p>
+							<p>Validate</p>
+							<p>http://medialize.github.io/jQuery-contextMenu/ </p>
+							<p>jcarousellite, jquery.cycle, jqzoom</p>
+						</div>
+					</div>
+				</blockquote>
+				<blockquote class="blockquote ml-5">
+					<h4>Some link for JQuery Plugin</h4>
+					<p><a href="http://jquerylist.com/">http://jquerylist.com/</a></p>
+					<p><a href="http://www.gmarwaha.com/jquery/jcarousellite/index.php">le carrousel jcarousellite</a></p>
+					<p><a href="http://sorgalla.com/jcarousel/"></a>http://sorgalla.com/jcarousel/</p>
+					<p><a href="http://tablesorter.com/docs/#Download">tablesorter » permet de trier une table HTML.</a></p>
+					<p><a href="http://tablesorter.com/docs/">tablesorter » permet de trier une table HTML</a></p>
+					<p><a href="http://www.datatables.net/">DataTables</a></p>
+					<p><a href=" http://jqueryvalidation.org/">Valider un formulaire</a></p>
+					<p><a href="http://jqueryvalidation.org/documentation/">Valider un formulaire Documentation</a></p>
+					<p><a href="http://www.malsup.com/jquery/cycle/">Plugin for animation</a></p>
+					<p><a href="http://www.bkosborne.com/jquery-waterwheel-carousel "> Le carrousel waterwheelCarousel</a></p>
+					<p><a href="http://www.bkosborne.com/jquery-waterwheel-carousel/options">Le carrousel waterwheelCarousel Option</a></p>
+					<p><a href="http://i-like-robots.github.io/jQuery-Slideshow/ ">Le diaporama slideshow</a></p>
+					<p><a href="http://www.mind-projects.it/projects/jqzoom/">Le zoomer jQZoom</a></p>
+					<p><a href="http://www.tripwiremagazine.com/2012/12/jquery-image-zoom.html ">Le zoomer jQZoom autre</a></p>
+					<p><a href="http://www.elevateweb.co.uk/image-zoom ">Le zoomer ElevateZoom</a></p>
+					<p><a href="http://www.elevateweb.co.uk/image-zoom/configuration ">Le zoomer ElevateZoom syntax</a></p>
+				</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="dombase">
+			<div class="card-body">
+					<div class="card-h
+					eader">Basic function DOM</div>
+					<blockquote class="blockquote ml-5">
+						<u><h4>Sélectionner plusieurs éléments</h4></u>
+						<p>var varibale = $('p')</p>
+						<u><h4>Récupérer la valeur d'un attribut d'un élément</h4></u>
+						<p>var id = $('#idNom').attr('id')</p>
+						<p>var type = $('#idNom').attr('type')</p>
+						<p>var valeur = $('id').val()</p>
+						<u><h4>Syntax pour innerHTML</h4></u>
+						<p>Si c'est un élément HTML sans value (div, p, span, label, …).</p>
+						<p>var valeur = $("id").html()</p>
+						<p>var valeur = $("id").text()</p>
+						<u><h4>Récupère le texte d'un <label></h4></u>
+						<p>var valeurInnerHTML = $("#lblTest").html()</p>
+						<u><h4>Affecter une valeur à un attribut d'un élément ou à un texte</h4></u>
+						<p> Affecte une valeur à un <input type="text"></p>
+						<p>$("#itElement").val("Nouvelle valeur pour l'IT")</p>
+						<p>Syntaxe pour n'importe quel autre attribut</p>
+						<p>$(objet).attr("attribut", "Nouvelle valeur")</p>
+						<u><h4>Syntaxe pour l'innerHTML</h4></u>
+						<p>$("#id").html("Nouvelle valeur")</p>
+						<p>$("#id").text("Nouvelle valeur")</p>
+						<u><p> Le cas de la classe</p></u>
+						<p>$(element).attr("class", "nomDeClasse")</p>
+						<u><p>Ajout d'une nouvelle classe</p></u>
+						<p>$(element).addClass = "nomDeClasse"</p>
+						<u><p>Récupération</p></u>
+						<p>var nomDeClasse = $(element).attr("class")</p>
+						<u><p>Insert an element</p></u>
+						<p>$("#id").before("élément à ajouter [+ valeur]")</p>
+						<p>$("#id").after("élément à ajouter [+ valeur]")</p>
+					</blockquote>
+	    	</div>
+	    	<div class="card-body">
+	    		<div class="card-header">Récupérer les valeurs des options sélectionnées dans une liste en multi-sélections..
+				</div>
+				<blockquote class="blockquote ml-5">
+				<select multiple = "multiple" name="select1" id="multiOption" size="6" >
+					<option value="Option1">Option1</option>
+					<option value="Option2">Option2</option>
+					<option value="Option3">Option3</option>
+					<option value="Option4">Option4</option>
+					<option value="Option5">Option5</option>
+				</select>
+				</blockquote>
+				<button class="col-md-2 float-left" id="multiOptionBtn">Affiche</button>
+				<button class="col-md-2 float-right" id="multiOptionCde">Code</button>
+				<span id="lbResult"></span>
+	    	</div>
+	    	<div class="card-body">
+	    		<div class="card-header">Travailler avec une case à cocher</div>
+	    		<blockquote class="blockquote ml-5">
+	    			<input type="checkbox" class="checklist" id="check1" name="checkbox1">&nbsp;Checkbox1<br>
+	    			<input type="checkbox" class="checklist" id="check2" name="checkbox1">&nbsp;Checkbox2<br>
+	    			<input type="checkbox" class="checklist" id="check3" name="checkbox1">&nbsp;Checkbox3<br>
+	    			<input type="checkbox" class="checklist" id="check4" name="checkbox1">&nbsp;Checkbox4<br>
+	    			<input type="checkbox" class="checklist" id="check5" name="checkbox1">&nbsp;Checkbox5
+	    		</blockquote>
+	    		<button class="col-md-2 float-right" id="checkCode">Code</button>
+	    	</div>
+	    	<div class="card-body">
+	    		<div class="card-header">Adding exemple</div>
+	    		<blockquote>
+	    			<div class="panel">
+	    			<h4>JQ DOM ADD</h4>
+	    			<select multiple="multiple" size="9" id="multipleOption">
+	    				<option value="option1">Option1</option>
+	    				<option value="option2">Option2</option>
+	    				<option value="option3">Option3</option>
+	    			</select><br>
+	    			<label>Add ?&nbsp;</label><input type="text" name="addtext" id="inputElement"><br>
+	    			<button class="col-md-2" id="addElement">Add</button>
+	    			</div>
+	    		</blockquote>
+	    		<button class="col-md-2 float-right" id="addCode">Code</button>
+	    	</div>
+	    	<div class="card-body">
+	    		<div class="card-header">Transfer lists one to another</div>
+	    		<blockquote class="blockquote row table-bordered">
+	    			<div id="gauche_slelect" class="col-2">
+	    				<select multiple="multiple" id="transfer1" size="6">
+	    					<option value='Paris 11'>Paris 11</option>
+                			<option value='Paris 12'>Paris 12</option>
+                			<option value='Paris 13'>Paris 13</option>
+	    				</select>
+	    			</div>
+	    			<div id="milieu" class="col-2">
+            		<br><br>
+            			<input type="button" value="<" id="btMoins" name="btMoins">
+            			<input type="button" value=">" id="btPlus"  name="btPlus">
+        			</div>
+	    			<div id="droite_select" class="col-2">
+	    				<select multiple="multiple" id="transfer2" size="6">
+	    					
+	    				</select>
+	    			</div>
+	    			<span id="test_transfer"></span>
+	    		</blockquote>
+	    		<button class="col-md-2 float-right" id="transfer_code">Code</button>
+	    	</div>
+	    	<div class="card-body">
+	    		<div class="card-body">Iteration</div>
+	    		<blockquote class="blockquote ml-5">
+	    			    <ul id="listeVilles">
+      						<li>Paris</li>
+      						<li>Lyon</li>
+      						<li>Marseille</li>
+    					</ul>
+    					<br/>
+    					<button class="col-md-2 float-right" id="code_iterations">Code</button>
+    					<p id="pResultat"></p>
+	    		</blockquote>
+	    	</div>
+	    	<div class="card-body">
+	    		<div class="card-body">Récupérer la liste des images d'une liste . Utile pour un carrousel.</div>
+	    		<blockquote class="blockquote ml-5">
+	    			<ul id="listesImages">
+	    				<li><img src="/image/le1.jpg" width="200" height="200"></li>
+	    				<li><img src="/image/le2.jpg" width="200" height="200"></li>
+	    				<li><img src="/image/le3.jpg" width="200" height="200"></li>
+	    				<li><img src="/image/le4.jpg" width="200" height="200"></li>
+	    				<li><img src="/image/le5.png" width="200" height="200"></li>
+	    			</ul>
+	    		</blockquote>
+	    		<button id="listeImageCode" class="col-md-2 float-right">Code</button>
+	    	</div>
+	    	<div class="card-body">
+	    		<div class="card-header">Récupérer les éléments multiples d'un formulaire</div>
+	    		<blockquote class="blockquote ml-5">
+	    			<form method="GET" id="produitForm"></form>
+	    			<table class="table border-0" id="tableForm">
+	    				<thead>
+	    					<tr>
+	    					<th>Produit</th>
+                            <th>Prix</th>
+                            <th>Quantité</th>
+                            <th>Montant</th>
+	    					</tr>
+	    				</thead>
+	    				<tbody id="bodyTable">
+	    					<tr>
+	    						<td><input type="text" name="produit[]"></td><td><input type="text" name="prix[]"></td><td><input type="text" name="qte[]"></td><td><label class="amount"></label></td>
+	    					</tr>
+	    				</tbody>
+	    			</table>
+	    			<br>
+	    			<button class="col-md-2" id="btPlusLigne">+Ligne</button><br><br>
+	    			<button class="col-md-2" id="btCalculer">Calculer</button>
+	    			<button class="col-md-2" id="">Submit</button><br>
+	    			Total : <span id="spTotal"></span>
+	    		</blockquote>
+	    	</div>
+		</div>
+		<div class="card mt-2" id="modification">
+			<div class="card-body">
+					<div class="card-header">Getter and Setter</div>
+					<h2>This is test for modification by getter and setter</h2>
+				<button class="col-md-2 float-right" id="modification_code">Code</button>
+	    	</div>
+		</div>
+		<div class="card mt-2" id="insert_test">
+			<div class="card-body">
+					<div class="card-header">Insert element</div>
+					    <h2 id="trois">Liste à puces(h2)</h2>
+				    <ul>
+				      <li>Premier élément</li>
+				      <li>Deuxième élément</li>
+				      <li>Troisième élément</li>
+				      <li>Quatrième élément</li>
+				    </ul>
+				<button class="col-md-2 float-left" id="insert">Insert</button>
+				<button class="col-md-2 float-left" id="delete">Delete</button><button class="col-md-2 float-right" id="insert_code">Code</button>
+	    	</div>
+		</div>
+		<div class="card mt-2" id="some_methods">
+			<div class="card-body">
+					<div class="card-header">Some insertion methods</div>
+					<h2>This is test for insertion by using some methods</h2>
+				<button class="col-md-2 float-left" id="methods">Methods</button><button class="col-md-2 float-right" id="method_code">Code</button>
+	    	</div>
+		</div>
+		<div class="card mt-2" id="class_test">
+			<div class="card-body">
+				<div class="card-header">Add class Remove class toggle class</div>
+		 		<span id="sohrab" class="bleu">Hossain Mohammad Sohrab</span>
+		 		<span id="taspia" class="vert">Taspia Sultana Humayun</span>
+		 		<span id="sohug" class="grand">Md Jahidul Islam</span>
+    		</div>
+		 </div>
+		<div class="card mt-2" id="formulaire">
+			<div class="card-body">
+					<div class="card-header">Travailler avec formulaire</div>
+					<div id="erreur">
+    					
+					</div>
+
+					<form>
+						<div class="form-group">
+							<label for="user">Nom d'Utilisateur</label>
+							<input type="text" class="form-control" id="user"  class="field">
+						</div>
+						<div class="form-group">
+							<label for="password">Mot de passe</label>
+							<input type="password" class="form-control" id="password" class="field">
+						</div>
+						<fieldset class="form-group row">
+							<legend class="col-form-legend col-sm-2">Sex</legend>
+							<div class="col-sm-10">
+								<div class="form-check">
+									<label class="form-check-label" >
+										<input class="form-check-input" type="radio" id="H" value="H" name="sexe">Homme
+									</label>
+								</div>
+								<div class="form-check">
+									<label class="form-check-label" >
+										<input class="form-check-input" type="radio" id="F" value="F" name="sexe">Femme
+									</label>
+								</div>
+							</div>
+						</fieldset>
+						<legend class="col-form-legend col-sm-2">Fonction</legend>
+					      <select class="form-control" id="fonction">
+					      	<option></option>
+					        <option VALUE="etudiant">Etudiant</option>
+					        <option VALUE="ingenieur">Ingénieur</option>
+					        <option VALUE="enseignant">Enseignant</option>
+					        <option VALUE="retraite">Retraité</option>
+					        <option VALUE="autre">Autre</option>
+					      </select><br /><br />
+					</form>
+				<button class="col-md-2 float-left" id="submit">Submit</button><button class="col-md-2 float-left" id="annuler">Reset</button><button class="col-md-2 float-right" id="formulaire_code">Code</button>
+	    	</div>
+	    	<div class="card-body">
+	    		<div class="card-header">Form with prevent method</div>
+	    		<blockquote class="blockquote ml-5">
+	    			<form action="" method="GET" id="input_form">
+	    				<label>ID : </label>
+            		<input type="text" name="id" id="id" value="11" />
+            		<label>Nom : </label>
+            		<input type="text" name="nom" id="nom" value="Taspia" />
+            		<input type="submit" value="Submit" id="btSubmit" />
+	    			</form>
+	    			<span id="spMessage"></span>
+	    		</blockquote>
+	    		<button class="col-md-2 float-right" id="form_event">Code</button>
+	    	</div>
+		</div>
+		<div class="card mt-2" id="fadeTest">
+			<div class="card-header">Fade</div>
+			<div class="card-body">
+		 		<ol class="rouge">
+      				<li>first fade out</li>
+      				<li>then fade in</li>
+      				<li>...</li>
+    			</ol>
+    		</div>
+    		<div class="card mt-2" id="img_fade">
+			<div class="card-body">
+				<div class="card-header">Click on image for fadein and fadeout only Once time</div>
+				<img src="/image/pressing.jpg" width="200" height="200" alt="image of pressing" id="image_pressing">
+				<span id='message'></span>
+				<button id="btn_click">Click here</button>
+				<button id="bonjour">Click Bonjour</button>
+				<button class="col-md-2 float-right" id="fade_code">code</button>
+			</div>
+			</div>
+		 </div>
+		 <div class="card mt-2" id="delay_fade">
+		 	<div class="card-body">
+		 		<div class="card-header">Fadein after certain times</div>
+		 		<span id="message_delay">Ce texte sera affiché pendant deux secondes</span><br /><br />
+				<button id="afficheMessage">Afficher le message</button>
+		 	</div>
+		 </div>
+		 <div class="card mt-2" id="animation">
+		 	<div class="card-body">
+		 		<div class="card-header">Appear and Disappear an Image</div>
+		 		<blockquote class="blockquote ml-5">
+		 			<button id="display" class="col-md-2">Display</button>
+		 			<button id="hide" class="col-md-2">Hide</button><br>
+		 			<table class="border-1">
+		 				<tr><td>a</td><td>b</td><td>c</td></tr>
+		 				<tr><td>d</td><td>e</td><td>f</td></tr>
+		 				<tr><td>g</td><td>h</td><td>i</td></tr>
+		 				<tr><td>j</td><td>k</td><td>l</td></tr>
+		 				<tr><td>m</td><td>n</td><td>o</td></tr>
+		 			</table>
+		 			<button class="col-md-2 float-right" id="table_code">Code</button>
+		 		</blockquote>
+		 	</div>
+		 	<div class="card-body">
+		 		<div class="card-header">Delay in animation</div>
+		 		<blockquote class="blockquote ml-5">
+		 			<button id="enchainer" class="col-md-2">Concatenate</button>
+		 			<button id="nePasEnchainer" class="col-md-3">Not Concatenate</button>
+		 			<button id="executerEnMemeTemps" class="col-md-3">Run Same Time</button>
+		 			<button id="etatInitial" class="col-md-3">Primary State</button><br><br>
+		 			<img src="/image/sohrab.jpg" id="animate_img" width="200" height="200" style="border:2px black solid">
+		 		</blockquote>
+		 		<button class="col-md-2 float-right" id="anim_code">Code</button>
+		 	</div>
+		 	
+		 	<div class="card-body"> 
+		 		<div class="card-header">Status of Queue</div>
+		 		<blockquote class="blockquote ml-5">
+		 			<button id="droite">Droite</button>
+					<button id="gauche">Gauche</button>
+					<button id="bas">Bas</button>
+					<button id="haut">Haut</button>
+					<button id="etatFile">Etat de la file d'attente</button><br />
+					<span id="infos">Cliquez sur Etat de la file d'attente</span><br /><br />
+					<img src="/image/sohrab.jpg" id="img_queue" height="200" width="200" style="position:relative">
+		 		</blockquote>
+		 		<button class="col-md-2 float-right" id="code_status">Code</button>
+		 	</div>
+		 	<div class="card-body">
+		 		<div class="card-header">Maintaining Delay</div>
+		 		<blockquote class="blockquote ml-5">
+		 			<button id="ajouter" class="col-md-2">Add anim</button>
+					<button id="annuler" class="col-md-3">Cancel queue waiting</button>
+					<button id="remplacer" class="col-md-3">Remplace queue waiting</button>
+					<button id="retour" class="col-md-2">Return</button><br><br>
+					<img src="/image/le1.jpg" height="200" width="300" id="bon" style="position:relative;" class="delay_img">
+					<img src="/image/le2.jpg" height="200" width="300" id="mauvais" style="position:relative;" class="delay_img">
+		 		</blockquote>
+		 		<button class="col-md-2 float-right" id="delay_maintain_code">Code</button>
+		 	</div>
+		 </div>
+		 <div class="card mt-2" id="basic_animation">
+		 	<div class="card-body">
+		 		<div class="card-header">Basic Animation</div>
+		 		<blockquote class="blockquote ml-5">
+		 			<img class="basic_anim" src="/image/le1.jpg" height="200" width="300" id="img1">
+		 			<img class="basic_anim" src="/image/le2.jpg" height="200" width="300" id="img2">
+		 			<img class="basic_anim" src="/image/le3.jpg" height="200" width="300" id="img3">
+		 			<img class="basic_anim" src="/image/le4.jpg" height="200" width="300" id="img4">
+		 			<img class="basic_anim" src="/image/le5.png" height="200" width="300" id="img5">
+		 		</blockquote>
+		 		<button class="col-md-2 float-right" id="basic_anim_code">Code</button>
+		 	</div>
+		 	<div class="card-body">
+		 		<div class="card-header">Repeat animation without termination</div>
+		 		<blockquote class="blockquote ml-5">
+		 			<div id="balle"></div>
+		 		</blockquote>
+		 		<button class="col-md-2 float-right" id="anim_without_term">Code</button>
+		 	</div>
+		 	<div class="card-body">
+		 		<div class="card-header">Stop and ReStart an animation</div>
+		 		<blockquote class="blockquote ml-5">
+		 			<button id="stopFin" class="col-md-3">Start & Finish</button>
+					<button id="stopAnnuleFin" class="col-md-3">Start,Cancel & Finish</button>
+					<button id="stop" class="col-md-1">Stop</button>
+					<button id="reprise" class="col-md-3">ReStart</button><br /><br />
+					<img src="/image/le1.jpg" id="img_start_stop" height="300" width="300" style="position: relative;">
+		 		</blockquote>
+		 	</div>
+		 </div>
+		<div class="card mt-2" id="img_hide_show">
+		 	<div class="card-body">
+		 		<div class="card-header">Appear and Disappear Image</div>
+		 		<button id="affiche">Faire apparaître les images</button>
+				<button id="cache">Faire disparaître les images</button><br />
+		 		<img class="img_test" src="/image/le3.jpg" width="150" height="150" alt="image">
+		 		<img class="img_test" src="/image/le4.jpg" width="150" height="150" alt="image">
+		 		<img class="img_test" src="/image/pic2.png" width="150" height="150" alt="image">
+		 	</div>
+		</div>
+		<div class="card mt-2" id="text">
+		 	<div class="card-body">
+		 		<div class="card-header">Type text and see result with blank space and without blank space</div>
+		 		<blockquote class="blockquote ml-5">
+		 		<label>Input: </label><input type="text" name="inputText" id="inputId"><br><br>
+		 		<button class="col-md-2 float-left" id="btn_text">Click</button>
+		 		<pre id="input_result"></pre>
+		 		</blockquote>
+		 		<button class="col-md-2 float-right" id="input_text_code">Code</button>
+		 	</div>
+		 	<div class="card-body">
+		 		<div class="card-header">Find out character positon from text</div>
+		 		<blockquote class="blockquote ml-5">
+		 			Tapez du texte dans la première zone de texte, une position dans la deuxième zone de texte, puis cliquez sur le bouton.<br><br>
+					<label>Texte : </label><input type="text" id="text_given" /><br>
+					<label>Position : </label><input type="number" id="text_position" /><br>
+					<button class="col-md-2 float-left" id="find_position">Click</button><br>
+					<div id="position_result"></div>
+		 		</blockquote>
+		 		<button class="col-md-2 float-right">Code</button>
+		 	</div>
+		</div>
+		<div class="card mt-2" id="text_image">
+			<div class="card-body">
+				<div class="card-header">Zoom out image by mouse pointer..</div>
+				<blockquote class="blockquote ml-5">
+					<img src="/image/half.jpg" id="zoom_img" alt="image">
+				</blockquote>
+				<button class="col-md-2 float-right" id="zoom_image_code">Code</button>
+			</div>
+			<div class="card-body">
+				<div class="card-header">Enlarged animation with overflight</div>
+				<blockquote class="blockquote ml-5">
+					<img src="/image/half.jpg" alt=" half image" class="img_pressing" id="img_half">
+					<img src="/image/full.jpg" alt=" full image" class="img_pressing" id="img_full">
+
+				</blockquote>
+				<button class="col-md-2 float-right" id="enlarge_image_code">Code</button>
+			</div>
+			<div class="card-body">
+				<div class="card-header">Galleries Images</div>
+				<blockquote class="blockquote ml-5">
+					<img src="/image/img/nature1.jpeg" class="naturalpic" alt="image" id="nature1">
+					<img src="/image/img/nature2.jpeg" class="naturalpic" alt="image" id="nature2">
+					<img src="/image/img/nature3.jpeg" class="naturalpic" alt="image" id="nature3">
+					<img src="/image/img/nature4.jpeg" class="naturalpic" alt="image" id="nature4">
+					<img src="/image/img/nature5.jpeg" class="naturalpic" alt="image" id="nature5">
+					<img src="/image/img/nature1-grand.jpeg" id="nature1_grand">
+				</blockquote>
+				<button class="col-md-2 float-right" id="galleries_imgs">Code</button>
+			</div>
+			<div class="card-body" style="height:300px;">
+				<div class="card-header">Diaporama automatique</div>
+				<blockquote class="blockquote ml-5">
+					<img src="/image/img/nature1.jpeg" class="diaporama" alt="image" id="diapo1">
+					<img src="/image/img/nature2.jpeg" class="diaporama" alt="image" id="diapo2">
+					<img src="/image/img/nature3.jpeg" class="diaporama" alt="image" id="diapo3">
+					<img src="/image/img/nature4.jpeg" class="diaporama" alt="image" id="diapo4">
+					<img src="/image/img/nature5.jpeg" class="diaporama" alt="image" id="diapo5">
+				</blockquote>
+				<button class="col-md-2 float-right" id="diaporama_imgs">Code</button>
+			</div>
+		</div>
+		<div class="card mt-2" id="change">
+			<div class="card-body">
+				<div class="card-header">Change option and effects</div>
+				<blockquote class="blockquote ml-5">
+				<p class="flottantGauche">
+		            <select name="lbEffets" id="lbEffets" size="9">
+		                <option value="show">Show</option>
+		                <option value="hide">Hide</option>
+		                <option value="toggle">Toggle</option>
+		                <option value="slideDown">SlideDown</option>
+		                <option value="slideUp">SlideUp</option>
+		                <option value="slideToggle">SlideToggle</option>
+		                <option value="fadeIn">FadeIn</option>
+		                <option value="fadeOut">FadeOut</option>
+		                <option value="fadeTo">FadeTo</option>
+		            </select>
+        		</p>
+        		<p class="flottantGauche" id="pImage">
+            	<img id="photo" src="/image/full.jpg" alt="Photo du film Confidences" width="400" />
+        		</p>
+        		<p class='nettoyeur'>
+            	<label id='lblMessage'></label>
+        		</p>
+				</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="stop">
+			<div class="card-body">
+				<div class="card-header">Stop sliding</div>
+				<blockquote class="blockquote ml-5">
+					<button id="slide_stop" class="col-md-2">Stop sliding</button>
+					<div id="slide_down">Click to slide down panel</div>
+					<div id="slide_panel">Hello world!</div>
+				</blockquote>
+				<button id="stop_code" class="float-right col-md-2">Code</button>
+			</div>
+		</div>
+		<div class="card mt-2" id="callback">
+			<div class="card-body">
+				<div class="card-header">Callback, javascript execute line by line .However, with effects, the next line of code can be run even though the effect is not finished. This can create errors.To prevent this, you can create a callback function.</div>
+				<blockquote class="blockquote ml-5">
+					<button id="btn_callback" class="col-md-2">Hide</button>
+					<button id="btn_callback1" class="col-md-3">Hide Callback</button>
+					<p id="text_callback">This is a paragraph with little content.</p>
+				</blockquote>
+				<button id="callback_code" class="float-right col-md-3">Code sans callback</button>
+				<button id="callback_code1" class="float-right col-md-3">Code with callback</button>
+			</div>
+		</div>
+		<div class="card mt-2" id="chaining">
+			<div class="card-body">
+				<div class="card-header">Method chaining(have added more method calls if needed one after another)</div>
+				<blockquote class="blockquote ml-5">
+					
+					<button class="float-left col-md-2" id="chain_click">Click me</button>
+				</blockquote>
+				<button class="float-right col-md-2" id="chain_code">Code</button>
+			</div>
+			<div class="card-body">
+				<div class="card-header">Chaining animatin </div>
+				<blockquote class="blockquote ml-5">
+				<p class="flottantGauche" id="pImage">
+					<img id="photo1" src="/image/full.jpg" alt="Photo du film Confidences" width="400" /><!--image position:relative si non ne marche pas -->
+				</p>
+				<p id="chain_method">jQuery is fun!!</p><!--text position:relative si non ne marche pas -->
+					<button class="col-md-3" id="chain_anim">Animation</button>
+				</blockquote>
+				<button class="col-md-2 float-right" id="chain_anim_code">Code</button>
+			</div>
+		</div>
+		<div class="card mt-2" id="all_elements">
+			<div class="card-body">
+				<div class="card-header">All selects</div>
+				<blockquote class="blockquote ml-5">
+				<h2>This is for hide all select</h2>
+
+				<p>This is a paragraph.</p>
+				<p>This is another paragraph.</p>
+
+				<button class="col-md-2" id="all">Click me</button><button class="col-md-2 float-right" id="all_code">Code</button>
+				</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="current_elements">
+			<div class="card-body">
+				<div class="card-header">Current Element select</div>
+				<blockquote class="blockquote ml-5">
+				<h2>This is for hide current element select</h2>
+
+				<p>This is a paragraph.</p>
+				<p>This is another paragraph.</p>
+
+				<button class="col-md-2" id="current">Click me</button><button class="col-md-2 float-right" id="current_code">code</button>
+				</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="class_element">
+			<div class="card-body">
+				<div class="card-header">Select class</div>
+				<blockquote class="blockquote ml-5">
+				<h2 class="intro">This is for hide select class</h2>
+
+				<p class="intro">This is a paragraph.</p>
+				<p>This is another paragraph.</p>
+
+				<button class="col-md-2" id="class_intro">Click me</button><button class="col-md-2 float-right" id="class_code">code</button>
+				</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="first_select_element">
+			<div class="card-body">
+				<div class="card-header">Select the first element</div>
+				<blockquote class="blockquote ml-5">
+				<h2>This is for hide first element</h2>
+
+				<h3>This is a paragraph.</h3>
+				<h3>This is another paragraph.</h3>
+
+				<button class="col-md-2" id="first_element">Click me</button><button class="col-md-2 float-right" id="first_code">code</button>
+				</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="first_ul_element">
+			<div class="card-body">
+				<div class="card-header">Select the first ul element and all ul first elements</div>
+				<blockquote class="blockquote ml-5">
+				<h2>This is for hide first ul element and all first ul element</h2>
+				<p>List 1:</p>
+				<ul>
+				  <li>Coffee</li>
+				  <li>Milk</li>
+				  <li>Tea</li>
+				</ul>
+
+				<p>List 2:</p>
+				<ul>
+				  <li>Coffee</li>
+				  <li>Milk</li>
+				  <li>Tea</li>
+				</ul>
+
+				<button class="col-md-2" id="ul_element">ul first element</button><button class="col-md-3" id="all_ul_element">All ul first element</button><button class="col-md-2 float-right" id="ul_code">code</button>
+				</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="select_href">
+			<div class="card-body">
+				<div class="card-header">Select href by jquery</div>
+				    <div id="listes">
+      					<a href="http://localhost:8000/default">API jQuery</a><br>
+      					<a href="http://docs.jquery.com">Documentation jQuery</a><br>
+    				</div>
+    			<button class="col-md-2 float-right" id="href_code">code</button>
+			</div>
+		</div>
+		<div class="card mt-2" id="target_blank">
+			<div class="card-body">
+				<div class="card-header">Select the target blank element</div>
+				<blockquote class="blockquote ml-5">
+				<h2>This is for hide non target blank element</h2>
+
+				<p>This is a paragraph.</p>
+				<p>This is another paragraph.</p>
+				<p><a href="https://www.w3schools.com/html/" target="_blank">HTML Tutorial</a></p>
+				<p><a href="https://www.w3schools.com/css/">CSS Tutorial</a></p>
+
+				<button class="col-md-2" id="target">Click me</button><button class="col-md-2 float-right" id="target_code">code</button>
+				</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="active_click">
+			<div class="card-body">
+				<div class="card-header">Active Click for click on Image</div>
+				<blockquote class="blockquote ml-5">
+					<img src="/image/pic1.png" id="image_click" height="260" width="280">
+					<button id="activer" class="col-md-2">Active click</button>
+					<button id="deactiver" class="col-md-2">Déactive click</button>
+					<button id="code_click" class="col-md-2 float-right">Code</button>
+				</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="mouse_event">
+			<div class="card-body">
+				<div class="card-header"> Click Event, Dblclick, Mouseenter, Mouseleave	</div>
+				<blockquote class="blockquote ml-5">
+					<p class="p1">If you click on the "Hide" button, It will disappear.</p>
+					<p class="p1">Lets test button.</p>
+					<button class="col-md-2" id="click_hide">Click Hide</button><button class="col-md-2" id="click_show">Click Show</button><button class="col-md-3" id="click_toggle">Toggle Hide and show</button><button class="col-md-2 float-right" id="click_code">Click code</button>
+				</blockquote>
+				<blockquote class="blockquote ml-5">
+					<button class="col-md-2" id="dblclick_hide">DblClick Hide</button><button class="col-md-2" id="dblclick_show">Mouseenter</button><button class="col-md-3" id="dblclick_toggle">Mouseleave</button><button class="col-md-2 float-right" id="dblclick_code"> DblClick code</button>
+				</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="form_events">
+			<div class="card-body">
+				<div class="card-header">Submit, Change, Focus, Blur, On</div>
+				<h4>Focus Blur</h4>
+				<blockquote class="blockquote row ml-5">
+					<p class="p2 col-md-3">Click or move the mouse pointer over this paragraph.</p>
+					<fieldset class="form-group col-md-3">
+						<label for="nom">Nom: </label>
+						<input class="form-control" type="text" name="nom">
+						<label for="nom">Prenom: </label>
+						<input class="form-control" type="text" name="prenom">
+					</fieldset>
+					</blockquote>
+					<button class="col-md-2 float-right" id="form_code">code</button>
+			<div class="card-body">
+				<div class="card-header">Focusin and Focusout</div>
+					<blockquote class="blockquote ml-5">
+						<form>
+							<fieldset id="first">
+								<legend>First Group</legend>
+								<input type="text" name="input1" class="f" id="zone_text1">
+								<input type="text" name="input2" class="f" id="zone_text2">
+							</fieldset>
+							<fieldset id="second">
+								<legend>Second Group</legend>
+								<input type="text" name="input3" class="f" id="zone_text3">
+								<input type="text" name="input4" class="f" id="zone_text4">
+							</fieldset>
+						</form><br>
+						<b>Focus: <span id="result"></span>&nbsp;&nbsp;</b><br>
+						<b>Lost Focus: <span id="result2"></span></b>
+					</blockquote>
+				<button class="col-md-2 float-right" id="focus_code">code</button>
+			</div>
+			<div class="card-body">
+				<div class="card-header">Focus and Blur on input by click</div>
+				<blockquote class="blockquote ml-5">
+					<span id="status">Cliquez sur un des éléments du formulaire</span><br /><br />
+					<form>
+					   	Input1: <input type="text" id="zone1"><br><br>
+					  	Input2: <input type="text" id="zone2"><br><br>
+					  	Input3: <input type="text" id="zone3"><br><br>
+					  	TextArea: <textarea id="zone4"></textarea><br>
+					  	<input type="reset" id="annuler" value="Annuler By HTML">&nbsp;&nbsp;<button class="col-md-3" id="annuler_by_jquery">Annuler By Jqury</button>
+					</form>
+				</blockquote>
+				<button class="col-md-2 float-right" id="focus_click_code">Code</button>
+			</div>
+				<hr>
+				<h4>Change</h4>
+				<blockquote class="blockquote row ml-5">
+					<form>
+						  Sélectionnez une valeur dans la liste déroulante
+						  <select>
+						    <option>J'aime jQuery</option>
+						    <option>J'adore jQuery</option>
+						    <option>Je raffole de jQuery</option>
+						    <option>jQuery ? Jamais entendu parler !</option>
+						  </select>
+						</form><br />
+
+						<span id="resultat"></span><br />
+				</blockquote>
+				<button class="col-md-2 float-right" id="change_code">code</button>
+			</div>
+		</div>
+		<div class="card mt-2" id="documents_events">
+			<div class="card-body">
+				<div class="card-header">load, resize, scroll, unload</div>
+				<blockquote class="blockquote row ml-5">
+					<div class="col-md-5">
+						<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+						<button id="load">Load External Content</button><br><br>
+					</div>
+					<div class="col-md-4">
+						<p>Try the scrollbar in the div</p>
+						<div class="scroll" id="scroll_count">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+						<br><br>
+						'Whenever you feel like criticizing anyone,' he told me, just remember that all the people in this world haven't had the advantages that you've had.'
+						</div>
+						<p>Scrolled <span>0</span> times.</p>
+						<button id="trigger_scroll">Trigger scroll event for the window</button>
+					</div>				
+				</blockquote>
+				<button class="col-md-2 float-right" id="load_scroll">code</button>
+				<blockquote class="blockquote row ml-5">
+					<div class="col-md-4" >
+						<p>Window resized <span>0</span> times.</p>
+						<p>Try resizing your browser window.</p>
+					</div>
+					<div class="col-md-4">
+						<p>When you click <a href="https://w3schools.com">this link</a>, or close the window, an alert box will be triggered.</p>
+					</div>
+				</blockquote>
+				<button class="col-md-2 float-right" id="resize_unload">code</button>
+			</div>
+		</div>
+		<div class="card mt-2" id="jquery_effects">
+			<div class="card-body">
+				<div class="card-header">SlideDown and slideUp</div>
+				<blockquote class="blockquote row ml-5">
+					<div id="flip" class="">Click to slidedown panel</div>
+					<div id="panel" >Hello World</div>
+				</blockquote>
+				<button class="col-md-2 float-right" id="form_code">code</button>
+			</div>
+		 	<div class="card-body">
+		 		<div class="card-header">Sliding in jQuery</div>
+		 		<blockquote class="blockquote ml-5">
+		 			<p id="img_slide"><img src="/image/img/nature5.jpeg" height="200" width="200" id=""></p>
+		 			<button class="col-md-2" id="slide_toggle">Toggle</button>
+		 		</blockquote>
+		 		<button class="float-right col-md-2" id="slide_code">Code</button>
+		 	</div>
+		</div>
+		<div class="card mt-2" id="img_effect">
+			<div class="card-body">
+				<div class="card-header">Click on image and positioning mouse</div>
+				<span id="rapport">fggggggggg</span>
+				<img src="/image/sohrab.jpg" height="300" width="300" alt="image of mine" id="target_img">
+			</div>
+		</div>
+
+		<div class="card mt-2" id="key_effect">
+			<div class="card-body">
+				<div class="card-header">Keydown, Keyup, Keypress</div>
+				<p>Keydown Keyup(write something into textarea)</p>
+				<div id="lumiere"></div>
+				<textarea id="target_text"></textarea>
+				<p>Keypress</p><br>
+				<form>
+					<h7>Put a character into text box..</h7><br>
+					<textarea id="saisie"></textarea>
+				</form>
+				<h6>Input character:<span id="unelettre"></span></h6>
+			</div>
+		</div>
+		<div class="card mt-2" id="on">
+			<div class="card-body">
+				<div class="card-header">Events and method On</div>
+				<div class="row">
+					<div class="col-6">
+						<pre>
+			.on('click', function() { … }
+			.on('scroll', function() { … }
+			.on('hover', function() { … }
+			.on('mouseover', function() { … }
+			.on('mouseenter', function() { … }
+			.on('mouse leave', function() { … }
+			.on('keydown', function() { … }
+			.on('keyup', function() { … }
+			.on('keypress', function() { … }
+			.on('focus', function() { … }
+			.on('blur', function() { … }
+			.on('resize', function() { … }
+						</pre>
+					</div>
+					<div class="col-6">
+						<pre>
+						.click()
+						.scroll()
+						.hover()
+						.mouseover()
+						.mouseout()
+						.mouseenter()
+						.mouseleave()
+						.keydown()
+						.keyup()
+						.keypress()
+						.focus()
+						.blur()
+						.resize()
+						</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card mt-2" id="exemple_html5">
+			<div class="card-body">
+					<div class="card-header">HTML5 defines eight new semantic elements. All these are block-level elements. <br>To secure correct behavior in older browsers, you can set the CSS display property for these HTML elements to block:</div>
+				<blockquote class="blockquote ml-5">
+			<pre>
+			header, section, footer, aside, nav, main, article, figure {
+   					display: block; 
+				}
+			</pre>
+				</blockquote>
+			</div>
+			<div class="card-body">
+				<div class="card-header">New Input Types && New Input Attributes</div>
+				<blockquote class="blockquote ml-5">
+					<div class="row">
+
+						<div class="col-6">
+						<h4>New Input Types</h4>
+							<li>color</li>
+							<li>date</li>
+							<li>datetime</li>
+							<li>datetime-local</li>
+							<li>email</li>
+							<li>month</li>
+							<li>number</li>
+							<li>range</li>
+							<li>search</li>
+							<li>tel</li>
+							<li>time</li>
+							<li>url</li>
+							<li>week</li>
+						</div>
+
+						<div class="col-6">
+						<h4>New Input Attributes</h4>
+							<li>autocomplete</li>
+							<li>autofocus</li>
+							<li>form</li>
+							<li>formaction</li>
+							<li>formenctype</li>
+							<li>formmethod</li>
+							<li>formnovalidate</li>
+							<li>height and width</li>
+							<li>list</li>
+							<li>min and max</li>
+							<li>multiple</li>
+							<li>pattern(regexp)</li>
+							<li>placeholder</li>
+							<li>required</li>
+							<li>step</li>
+						</div>
+					</div>
+				</blockquote>
+			</div>
+			<div class="card-body">
+				<div class="card-header">New Media Elements</div>
+				<blockquote class="blockquote ml-5">
+					<li>(audio) Defines sound content</li>
+					<li>(embed) Defines a container for an external (non-HTML) application</li>
+					<li>(source) Defines multiple media resources for media elements ((video() and (audio)</li>
+					<li>(track) Defines text tracks for media elements ((video) and (audio)</li>
+					<li>(video) Defines video or movie</li>
+				</blockquote>
+			</div>
+		</div>
+		<div class="card mt-2" id="time">
+			<div class="card-body">
+				<blockquote class="blockquote ml-5">
+				<div class="card-header">Setting timmer</div>
+				<span id="heure"></span>
+				</blockquote>
+				<button class="col-md-2 float-right" id="heureCode">Code</button>
+			</div>
+		</div>
+		<div class="card mt-2">
+		</div>
+</div>
+{% endblock %}
